@@ -5,12 +5,12 @@ let dist = 0
 let current = 0
 let next_y = 0
 let next_x = 0
-let pos_x = 0
-let pos_y = 0
-let position_y = 0
-let position_x = 0
-let sprites: game.LedSprite[] = []
 let count = 0
+let sprites: game.LedSprite[] = []
+let position_x = 0
+let position_y = 0
+let pos_y = 0
+let pos_x = 0
 let world = [[0, 0, 0, 0, 0], [1, 1, 1, 1, 0], [0, 0, 0, 0, 0], [0, 1, 1, 1, 1], [0, 0, 0, 0, 0]]
 for (let i = 0; i <= 4; i++) {
     for (let j = 0; j <= 4; j++) {
@@ -36,7 +36,7 @@ distanceMatrix[0][0] = 0
 let visited = [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]
 let toVisit = [position_x, position_y]
 while (toVisit.length > 0) {
-        basic.showLeds(`
+    basic.showLeds(`
         # # # # #
         . # # # .
         . . # . .
@@ -118,6 +118,4 @@ basic.pause(500)
     } else {
         basic.showIcon(IconNames.Happy)
     }
-
-    
 })
